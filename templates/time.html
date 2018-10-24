@@ -1,0 +1,77 @@
+<script src="https://img.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+<script src="https://img.hcharts.cn/highmaps/highmaps.js"></script>
+<script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.6/proj4.js"></script>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* css 代码  */
+    </style>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.2.2/proj4.js"></script>
+    <!-- 所有地图数据详情见：https://img.hcharts.cn/mapdata/index.html -->
+    
+    <script src="https://img.hcharts.cn/mapdata/custom/world-highres.js"></script>
+    <script src="https://img.hcharts.cn/mapdata/custom/world-highres.geo.json"></script>
+    <div id="container" style="height: 90%;"></div>
+    <script>
+        $(function () {
+            //http://api.map.baidu.com/geocoder/v2/?address=London&output=json&ak=SxEpIE8ZMgnaOLPtgDlPe8747X3jm15p
+            // Initiate the chart
+            $('#container').highcharts('Map', {
+                title: {
+                    text: '城市经纬度标注'
+                },
+                mapNavigation: {
+                    enabled: true
+                },
+                tooltip: {
+                    headerFormat: '',
+                    pointFormat: '<b>{point.name}</b><br>Lat: {point.lat}, Lon: {point.lon}'
+                },
+                series: [{
+                    // Use the gb-all map with no data as a basemap
+                    mapData: Highcharts.maps['custom/world-highres'],
+                    name: 'Basemap',
+                    borderColor: '#A0A0A0',
+                    nullColor: '#69c0ff',
+                    showInLegend: false
+                }, {
+                    name: 'Separators',
+                    type: 'mapline',
+                    data: Highcharts.geojson(Highcharts.maps['custom/world-highres'], 'mapline'),
+                    color: '#a4edba',
+                    showInLegend: false,
+                    enableMouseTracking: false
+                }, {
+                    // Specify points using lat/lon
+                    type: 'mappoint',
+                    name: 'Cities',
+                    color: Highcharts.getOptions().colors[1],
+                    data: [{
+                        name: 'London',
+                        lat: 51.507222,
+                        lon: -0.1275
+                    },  {
+                        name: '北京',
+                        lat: 39.9059631,
+                        lon: 116.391248
+                    }, {
+                        name: 'Canberra',
+                        lat: -35.2975906,
+                        lon: 149.1012676
+                    }]
+                }]
+            });
+        });
+    </script>
+</body>
+
+</html>

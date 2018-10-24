@@ -1,0 +1,106 @@
+<script src="https://img.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.6/proj4.js"></script>
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+<!-- 所有地图数据详情见：https://img.hcharts.cn/mapdata/index.html -->
+<script src="https://img.hcharts.cn/mapdata/custom/world-highres.js"></script>
+<script src="https://img.hcharts.cn/mapdata/custom/world-highres.geo.json"></script>
+<input type="text" name="actor1" id="actor1" />
+<input type="text" name="actor2" id="actor2" />
+<input type="button" onclick="click1()" value="Submit" />
+<div id="container" style="height: 120%;"></div>
+<script>
+    function click1() {
+        actor1 = $('#actor1').val();
+        actor2 = $('#actor2').val();
+        draw_geo(actor1, actor2)
+    }
+    $(function () {
+        // Initiate the chart
+        var chart = Highcharts.mapChart('container', {
+
+            title: {
+                text: 'France, Australia call on China to observe rules'
+            },
+            tooltip: {
+                    pointFormat: '{point.name} <br> 文章名:France, Australia call on China to observe rules<br><a>原文:http://www.miamiherald.com/news/business/article210267264.html#storylink=rss</a><br>时间:2018-05-02'
+            },
+            mapNavigation: {
+                enabled: true,
+                buttonOptions: {
+                    verticalAlign: 'bottom'
+                }
+            },
+
+            series: [{
+                mapData: Highcharts.maps['custom/world-highres'],
+                name: 'Basemap',
+                showInLegend: false,
+                borderColor: '#fff',
+                nullColor: '#99DD99',
+                dataLabels: {
+                    enabled: true,
+                    format: 's'
+                }
+            },
+                {
+                type: 'mapline',
+                name: 'Links',
+                color: '#c77'
+                // Data filled in after chart is drawn
+            }, {
+                type: 'mappoint',
+                name: '施事者地点',
+                data: [{
+                    'name': 'France',
+                    'lat': 46.603354,
+                    'lon': 1.8883335,
+                    'color': 'red'
+                },
+                    {
+                        'name': 'Canberra',
+                        'lat': -35.2975906,
+                        'lon': 149.1012676,
+                        'color': 'red'
+                    }]
+            }, {
+                type: 'mappoint',
+                name: '受事者地点',
+                color: 'grey',
+                data: [{
+                    'name': 'China',
+                    'lat': 35.000074,
+                    'lon': 104.999927,
+                    'color': 'blue',
+                    'hub': 'France',
+                    'value':'French President Emmanuel Macron and Australian Prime Minister Malcolm Turnbull on Wednesday issued a reminder to China to respect a "rules-based" order in the South Pacific amid concerns about Beijing\'s growing influence in the region.'
+                },{
+                    'name': 'China',
+                    'lat': 35.000074,
+                    'lon': 104.999927,
+                    'color': 'blue',
+                    'hub': 'Canberra'
+                }]
+            },
+            ]
+        });
+
+        // After the chart has been created, programmatically add data to the 'links' series showing connections between hubs and nodes
+        Highcharts.each(chart.series[3].points, function (node) {
+            if (node.lat) {
+                Highcharts.merge(true, node, chart.fromLatLonToPoint(node));
+            }
+            Highcharts.each(chart.series[2].points, function (hub) {
+                if (node.hub === hub.geo1) {
+                    if (hub.lat) {
+                        hub = chart.fromLatLonToPoint(hub);
+                    }
+                    chart.series[1].addPoint({
+                        path: 'M' + node.x + ' ' + node.y + 'L' + hub.x + ' ' + hub.y
+                    }, false);
+                }
+            });
+        });
+        chart.redraw();
+    });
+</script>

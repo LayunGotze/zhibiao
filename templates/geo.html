@@ -1,0 +1,157 @@
+<script src="https://img.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.6/proj4.js"></script>
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+<!-- 所有地图数据详情见：https://img.hcharts.cn/mapdata/index.html -->
+<script src="https://img.hcharts.cn/mapdata/custom/world-highres.js"></script>
+<script src="https://img.hcharts.cn/mapdata/custom/world-highres.geo.json"></script>
+<input type="text" name="actor1" id="actor1" />
+<input type="text" name="actor2" id="actor2" />
+<input type="button" onclick="click1()" value="Submit" />
+<div id="container" style="height: 120%;"></div>
+<script>
+    function click1() {
+        actor1 = $('#actor1').val();
+        actor2 = $('#actor2').val();
+        draw_geo(actor1, actor2)
+    }
+    function draw_geo(actor1, actor2) {
+        $.get('api/event_geo', { 'actor1': actor1, 'actor2': actor2 }, function (ret) {
+            var tmp = ret['res'];
+            actor1data = [];
+            actor2data = [];
+            var l = tmp.length;
+            console.log(l);
+            for (var i = 0; i < l; i++) {
+                actor1data.push(tmp[i]['actor1geo_fullname1']);
+                actor2data.push(tmp[i]['actor2geo_fullname1']);
+            }
+            console.log(actor1data);
+            console.log(actor2data);
+            $(function () {
+                // Initiate the chart
+                var chart = Highcharts.mapChart('container', {
+
+                    title: {
+                        text: 'France, Australia call on China to observe rules'
+                    },
+                    tooltip: {
+                        pointFormat: '姓名:{point.name}<br>地点{point.geo} <br> 文章名:{point.origin.res.title}<br> 原文:{point.origin.res.url} <br>时间:{point.time}'
+                    },
+                    mapNavigation: {
+                        enabled: true,
+                        buttonOptions: {
+                            verticalAlign: 'bottom'
+                        }
+                    },
+
+                    series: [{
+                        mapData: Highcharts.maps['custom/world-highres'],
+                        name: 'Basemap',
+                        showInLegend: false,
+                        borderColor: '#fff',
+                        nullColor: '#99DD99',
+                        dataLabels: {
+                            enabled: true,
+                            format: 's'
+                        }
+                    }, {
+                        type: 'mapline',
+                        name: 'Links',
+                        color: '#c77'
+                        // Data filled in after chart is drawn
+                    }, {
+                        type: 'mappoint',
+                        name: '施事者地点',
+                        data: actor1data
+                    }, {
+                        type: 'mappoint',
+                        name: '受事者地点',
+                        color: 'grey',
+                        data: actor2data
+                    },
+                    ]
+                });
+
+                // After the chart has been created, programmatically add data to the 'links' series showing connections between hubs and nodes
+                Highcharts.each(chart.series[3].points, function (node) {
+                    if (node.lat) {
+                        Highcharts.merge(true, node, chart.fromLatLonToPoint(node));
+                    }
+                    Highcharts.each(chart.series[2].points, function (hub) {
+                        if (node.hub === hub.geo) {
+                            if (hub.lat) {
+                                hub = chart.fromLatLonToPoint(hub);
+                            }
+                            chart.series[1].addPoint({
+                                path: 'M' + node.x + ' ' + node.y + 'L' + hub.x + ' ' + hub.y
+                            }, false);
+                        }
+                    });
+                });
+                chart.redraw();
+            });
+        });
+    }
+    $(function () {
+        // Initiate the chart
+        var chart = Highcharts.mapChart('container', {
+
+            title: {
+                text: '城市经纬度标注'
+            },
+
+            mapNavigation: {
+                enabled: true,
+                buttonOptions: {
+                    verticalAlign: 'bottom'
+                }
+            },
+
+            series: [{
+                mapData: Highcharts.maps['custom/world-highres'],
+                name: 'Basemap',
+                showInLegend: false,
+                borderColor: '#fff',
+                nullColor: '#99DD99',
+                dataLabels: {
+                    enabled: true,
+                    format: 's'
+                }
+            }, {
+                type: 'mapline',
+                name: 'Links',
+                color: '#c77'
+                // Data filled in after chart is drawn
+            }, {
+                type: 'mappoint',
+                name: '施事者地点',
+                data: []
+            }, {
+                type: 'mappoint',
+                name: '受事者地点',
+                color: 'grey',
+                data: []
+            },
+            ]
+        });
+
+        // After the chart has been created, programmatically add data to the 'links' series showing connections between hubs and nodes
+        Highcharts.each(chart.series[3].points, function (node) {
+            if (node.lat) {
+                Highcharts.merge(true, node, chart.fromLatLonToPoint(node));
+            }
+            Highcharts.each(chart.series[2].points, function (hub) {
+                if (node.hub === hub.name) {
+                    if (hub.lat) {
+                        hub = chart.fromLatLonToPoint(hub);
+                    }
+                    chart.series[1].addPoint({
+                        path: 'M' + node.x + ' ' + node.y + 'L' + hub.x + ' ' + hub.y
+                    }, false);
+                }
+            });
+        });
+        chart.redraw();
+    });
+</script>
