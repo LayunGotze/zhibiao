@@ -5,18 +5,31 @@
 <!-- 所有地图数据详情见：https://img.hcharts.cn/mapdata/index.html -->
 <script src="https://img.hcharts.cn/mapdata/custom/world-highres.js"></script>
 <script src="https://img.hcharts.cn/mapdata/custom/world-highres.geo.json"></script>
-<input type="text" name="actor1" id="actor1" />
-<input type="text" name="actor2" id="actor2" />
+<input type="text" name="actor1" id="actor1" /><br>
+<input type="text" name="actor2" id="actor2" /><br>
+<input type="text" name="code" id="code" /><br>
+<input type="date" name="start" id="start" /><br>
+<input type="date" name="end" id="end" /><br>
 <input type="button" onclick="click1()" value="Submit" />
 <div id="container" style="height: 120%;"></div>
 <script>
     function click1() {
         actor1 = $('#actor1').val();
         actor2 = $('#actor2').val();
-        draw_geo(actor1, actor2)
+        code = $('#code').val();
+        startdate=$('#start').val();
+        enddate=$('#end').val();
+        draw_geo(actor1, actor2,code,startdate,enddate)
     }
-    function draw_geo(actor1, actor2) {
-        $.get('api/event_geo', { 'actor1': actor1, 'actor2': actor2 }, function (ret) {
+    function draw_geo(actor1, actor2,code,startdate,enddate) {
+        if (code=='')
+            code=-1;
+        $.get('api/event_geo', { 'actor1': actor1, 'actor2': actor2,'code':code,'start':startdate,'end':enddate }, function (ret) {
+            var msg=ret['msg']
+            if(msg!='success'){
+                alert(msg)
+                return;
+            }
             var tmp = ret['res'];
             actor1data = [];
             actor2data = [];

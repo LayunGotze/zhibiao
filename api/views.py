@@ -177,10 +177,20 @@ def event_combine(request):
     return JsonResponse(ret)
 
 def event_combine_geo(request):
-    return JsonResponse(tmp)
+    #return JsonResponse(tmp)
     actor1=request.GET.get('actor1','President')
     actor2=request.GET.get('actor2','China')
-    ret=event_combine_by_name(actor1,actor2)
+    eventcode=request.GET.get('code',-1)
+    eventcode=int(eventcode)
+    start=request.GET.get('start','')
+    end=request.GET.get('end','')
+    if start!='':
+      start=start.replace('-','')
+    if end!='':
+      end=end.replace('-','')
+    print(start)
+    print(end)
+    ret=event_combine_by_name(actor1,actor2,eventcode,start,end)
     ret=all_geo2lat(ret)
     return JsonResponse(ret)
 
