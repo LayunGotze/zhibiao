@@ -5,18 +5,37 @@
 <!-- 所有地图数据详情见：https://img.hcharts.cn/mapdata/index.html -->
 <script src="https://img.hcharts.cn/mapdata/custom/world-highres.js"></script>
 <script src="https://img.hcharts.cn/mapdata/custom/world-highres.geo.json"></script>
-<input type="text" name="actor1" id="actor1" /><br>
-<input type="text" name="actor2" id="actor2" /><br>
-<input type="text" name="code" id="code" /><br>
-<input type="date" name="start" id="start" /><br>
-<input type="date" name="end" id="end" /><br>
-<input type="button" onclick="click1()" value="Submit" />
+<span>施事者姓名:</span><input type="text" name="actor1" id="actor1" />
+<span>受事者姓名:</span><input type="text" name="actor2" id="actor2" />
+<span>事件</span>
+<select id="code" >
+    <option value ="说">说</option>
+    <option value ="做">做</option>
+    <option value ="担忧">担忧</option>
+    <option value ="相信">相信</option>
+    <option value ="拒绝">拒绝</option>
+    <option value ="承认">承认</option>
+    <option value ="否认">否认</option>
+    <option value ="尊重">尊重</option>
+    <option value ="同情">同情</option>
+    <option value ="赞同">赞同</option>
+    <option value ="寻求">寻求</option>
+    <option value ="寻求帮助">寻求帮助</option>
+    <option value ="寻求认同">寻求认同</option>
+    <option value ="呼吁克制">呼吁克制</option>
+    <option value ="寻求对话">寻求对话</option>
+    <option value ="寻找办法">寻找办法</option>
+    <option value ="会面调解">会面调解</option>
+</select>
+<span>开始时间</span><input type="date" name="start" id="start" />
+<span>截止时间</span><input type="date" name="end" id="end" />
+<input type="button" onclick="click1()" value="提交"/>
 <div id="container" style="height: 120%;"></div>
 <script>
     function click1() {
         actor1 = $('#actor1').val();
         actor2 = $('#actor2').val();
-        code = $('#code').val();
+        code = $('#code option:selected ').val();
         startdate=$('#start').val();
         enddate=$('#end').val();
         draw_geo(actor1, actor2,code,startdate,enddate)
@@ -46,7 +65,7 @@
                 var chart = Highcharts.mapChart('container', {
 
                     title: {
-                        text: 'France, Australia call on China to observe rules'
+                        text: actor1+' '+code+' '+actor2
                     },
                     tooltip: {
                         pointFormat: '姓名:{point.name}<br>地点{point.geo} <br> 文章名:{point.origin.res.title}<br> 原文:{point.origin.res.url} <br>时间:{point.time}'

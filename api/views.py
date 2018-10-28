@@ -170,6 +170,25 @@ tmp={
   "actor1name": "President",
   "actor2name": "China"
 }
+eventcode_dict={'说': 10, '做': 121, '担忧': 12, '相信': 13,
+   '拒绝': 14, '承认': 15, '否认': 16,
+   '尊重': 17, '同情': 18, '赞同': 19,
+   '寻求': 20, '寻求帮助': [21,22,23,103],
+   '寻求认同': 24, '呼吁克制': 25, '寻求对话': 26, '寻找办法': 27,
+   '会面调解': [28,106], '计划': 30, '将提供帮助': [31,33], '将会影响': 32,
+   '为选举投票': 34, '将允许': 35, '会面': 36, '达成条约': 37,
+   '将干预': 38, '面临': 40, '致电': 41, '拜访': [42,43],
+   '举办会议': 44, '中介调解': 45, '支持': 50, '称赞': [51,52],
+   '希望结束': 53, '建立外交关系': 54, '道歉': 55, '原谅': 56,
+   '签署条约': 57, '给予': 60, '支付': 61, '装备': 62, '引渡': 63,
+   '寻求信息': 64, '贡献': 70, '获得收入': 71,
+   '携带武器': 72, '救援': 73, '保护': 74, '避难': 75, '允许': 80, '证明无罪': 81,
+   '辞职': 83, '释放': 84, '制裁': 85, '呼吁停止': 87,
+   '呼吁调查': [90,91], '主管': 92,
+   '视察军队': 93, '调查屠杀': 94, '寻求解释': 101,
+   '揭露': 102, '要求撤回': 105,
+   '镇压': 110, '宣誓就职': 111, '职责': 112,
+   '反对': 113, '抱怨': 114}
 def event_combine(request):
     actor1=request.GET.get('actor1','President')
     actor2=request.GET.get('actor2','China')
@@ -181,7 +200,12 @@ def event_combine_geo(request):
     actor1=request.GET.get('actor1','President')
     actor2=request.GET.get('actor2','China')
     eventcode=request.GET.get('code',-1)
-    eventcode=int(eventcode)
+    eventcode=str(eventcode)
+    if eventcode not in eventcode_dict:
+        eventcode=-1
+    else:
+        eventcode=eventcode_dict[eventcode]
+    #可能存在eventcode是list的问题！
     start=request.GET.get('start','')
     end=request.GET.get('end','')
     if start!='':

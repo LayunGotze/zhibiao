@@ -26,8 +26,6 @@ def event_combine_by_name(actor1name='',actor2name='',eventcode=-1,begindate='',
     if bool_actor1==0 and bool_actor2==0:
         #两个姓名都未出现过
         return {'msg':'无搜索结果'}
-    eventcode=10
-    eventverb='said'
     actor1code=[]
     actor2code=[]
     search_dict = {}
@@ -40,26 +38,29 @@ def event_combine_by_name(actor1name='',actor2name='',eventcode=-1,begindate='',
     #排除缺少地理信息的
     search_dict['actor1geo_fullname'] = {"$not": {"$in": ['']}}
     search_dict['actor2geo_fullname'] = {"$not": {"$in": ['']}}
+    if type(eventcode)==list:
+        search_dict['eventcode'] = {"$in":eventcode}
+    elif eventcode==-1:
+        return {"msg":"没有此事件"}
+    else:
+        search_dict['eventcode'] = eventcode
     if bool_actor1==1 and bool_actor2==1:
         #两个姓名都出现了
         actor1code = name2code_dict[actor1name]
         actor2code = name2code_dict[actor2name]
         #search_dict['actor1code']={"$in":actor1code}
         #search_dict['actor2code']={"$in":actor2code}
-        search_dict['eventcode']=eventcode
         search_dict['actor1name']=actor1name
         search_dict['actor2name']=actor2name
     if bool_actor1==1 and bool_actor2==0:
         #出现了1没有2
         actor1code = name2code_dict[actor1name]
         search_dict['actor2code'] = {"$in": actor1code}
-        search_dict['eventcode'] = eventcode
         search_dict['actor1name'] = actor1name
     if bool_actor1==0 and bool_actor2==1:
         #出现了2没有1
         actor2code = name2code_dict[actor2name]
         search_dict['actor1code'] = {"$in": actor2code}
-        search_dict['eventcode'] = eventcode
         search_dict['actor2name'] = actor2name
     #以上都是生成查询语句
     print(search_dict)
@@ -78,7 +79,7 @@ def event_combine_by_name(actor1name='',actor2name='',eventcode=-1,begindate='',
 
     ret={}
     ret['total']=res.count()
-    list=[]
+    res_list=[]
     for item in res:
         tmp_dict={}
         for key in want_key:
@@ -91,8 +92,8 @@ def event_combine_by_name(actor1name='',actor2name='',eventcode=-1,begindate='',
             if tmp_dict[key]!="null":
                 tmp_dict['lat'],tmp_dict['log']=geo2lat(tmp_dict[key])
         """
-        list.append(tmp_dict)
-    ret['res']=list
+        res_list.append(tmp_dict)
+    ret['res']=res_list
     ret['msg']='success'
     ret['actor1name']=actor1name
     ret['actor2name']=actor2name
