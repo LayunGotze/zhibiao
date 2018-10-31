@@ -26,6 +26,7 @@
     <option value ="寻求对话">寻求对话</option>
     <option value ="寻找办法">寻找办法</option>
     <option value ="会面调解">会面调解</option>
+    <option value ="举办会议">举办会议</option>
 </select>
 <span>开始时间</span><input type="date" name="start" id="start" />
 <span>截止时间</span><input type="date" name="end" id="end" />
@@ -46,7 +47,7 @@
         $.get('api/event_geo', { 'actor1': actor1, 'actor2': actor2,'code':code,'start':startdate,'end':enddate }, function (ret) {
             var msg=ret['msg']
             if(msg!='success'){
-                alert(msg)
+                alert(msg);
                 return;
             }
             var tmp = ret['res'];

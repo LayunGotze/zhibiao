@@ -8,6 +8,7 @@ from api.use.geo_lat_lon import *
 from api.use.original_text import *
 # Create your views here.
 tmp={
+  "msg":"success",
   "total": 4,
   "res": [
     {
@@ -196,7 +197,7 @@ def event_combine(request):
     return JsonResponse(ret)
 
 def event_combine_geo(request):
-    #return JsonResponse(tmp)
+    return JsonResponse(tmp)
     actor1=request.GET.get('actor1','President')
     actor2=request.GET.get('actor2','China')
     eventcode=request.GET.get('code',-1)

@@ -6,3 +6,6 @@ def world_map(request):
 
 def time_line(request):
     return render(request,'time.html')
+
+def test(request):
+    return render(request,'geo2.html')

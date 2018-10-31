@@ -1,0 +1,10 @@
+#part1
+阿布_尼达尔_组织 [IMGMUSALQ] # kkl 21 Mar 13
++阿拉伯
+
+亚丁湾_伊斯兰军 [FRAREB] # kkl 21 Mar 13
++穆罕默德军
++巴基斯坦
+
+# add by wangchangbao
+伊斯兰国 [DZAREB]

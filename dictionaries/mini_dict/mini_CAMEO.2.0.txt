@@ -1,0 +1,1240 @@
+---  BLAME   [112]  ---
+归咎
+控告
+指责
+批判
+责备
+责怪
+判刑
+谴责
+起诉
+指控
+- *                                                 [1124]        # ACCUSE
+
+---  BLAME0   [--]  ---
+归咎
+控告
+指责
+批判
+责备
+责怪
+判刑
+谴责
+起诉
+指控
+- * 恐怖 袭击                                        [018]         # CONDEMN
+- * 审判 公平                                        [053]         # CONDEMN
+- * &MILITARY 入侵                                   [111]         # CONDEMN
+- * &MILITARY 行动                                   [111]         # CONDEMN
+- * &WEAPON 攻击                                     [111]         # CONDEMN
+- * 自杀式炸弹 袭击                                  [111]         # CONDEMN
+- * &MILITARY                                        [111]         # CONDEMN
+- * 轰炸                                             [111]         # CONDEMN
+- * 决定                                             [111]         # CONDEMN
+- * 杀害                                             [111]         # CONDEMN
+- * 屠杀                                             [111]         # CONDEMN
+- * 射击                                             [111]         # CONDEMN
+- * 射击                                             [111]         # CONDEMN
+- * 暴动                                             [111]         # CONDEMN
+- * 袭击                                             [111]         # CONDEMN
+- * 杀害                                             [111]         # CONDEMN
+- * &FIGHT                                           [111]         # CONDEMN
+- * 政变                                             [111]         # CONDEMN
+- * 袭击                                             [111]         # CONDEMN
+- * 指控                                             [1121]        # CHARGE
+- * 违反 人道主义法                                  [1122]        # CONDEMN
+- * 权利 滥用                                        [1122]        # ACCUSE
+- * 折磨                                             [1122]        # BLAME
+- * 折磨                                             [1122]        # CONDEMN
+- * 酷刑                                             [1122]        # ACCUSE
+- 间谍 *                                             [1122]        # CHARGE
+- * 侵犯 主权                                        [1123]        # ACCUSE
+- * 暴力                                             [1123]        # ACCUSE
+- * 侵略                                             [1123]        # ACCUSE
+- * 攻击                                             [1123]        # ACCUSE
+- * 种族 清洗                                        [1124]        # ACCUSE
+- * 日内瓦 公约                                      [1124]        # ACCUSE
+- * 恐怖主义                                         [1124]        # CHARGE
+- * 袭击 &CRIME                                      [1124]        # CONDEMN
+- * 攻击                                             [1124]        # BLAME
+- * 大屠杀                                           [1124]        # ACCUSE
+- * 攻击                                             [1124]        # BLAME
+- * 攻击                                             [1124]        # BLAME
+- * 暴行                                             [1124]        # ACCUSE
+- * 屠杀                                             [1124]        # ACCUSE
+- * &FIGHT &CRIME                                    [1125]        # CHARGE
+- * &FIGHT &CRIME                                    [1125]        # CHARGE
+- * 广播 消息                                        [112]         # CHARGE
+- * 攻击                                             [112]         # BLAME
+- 委员会 *                                           [112]         # ACCUSE
+- * 审判                                             [112]         # CONDEMN
+- * 暴力                                             [112]         # BLAME
+- * &HOSTAGE                                         [112]         # ACCUSE
+- * &DETENTION                                       [173]         # CONDEMN
+- * &CRIME                                           [173]         # INDICT
+- * 罪名                                             [173]         # INDICT
+- * &CRIME                                           [173]         # CONVICT
+- 检察官 *                                           [173]         # CHARGE
+- * &SUSPECT                                         [173]         # ACCUSE
+- 法庭 *                                             [173]         # CONDEMN
+- 法院 *                                             [173]         # CONDEMN
+- 法院 *                                             [173]         # CHARGE
+
+---  CONTINUE   [---]  ---
+前进
+向前
+推进
+进展
+接关
+继续
+坚持
+持续
+行进
+进行
+进步
+- * 计划                                             [020]         # ADVANCE
+- * &MEDIATION                                       [045]         # CONTINUE
+- * 谈判                                             [046:046]     # CONTINUE
+- * 谈判                                             [046:046]     # CONTINUE
+- * 努力                                             [060]         # CONTINUE
+- * 对峙                                             [120:120]     # CONTINUE
+- * 拒绝 承认                                        [1232]        # CONTINUE
+- * 围攻                                             [190]        # CONTINUE
+- * 起义                                             [145]         # CONTINUE
+- * &MILITARY 建设                                   [154]         # CONTINUE
+- * 镇压                                             [170]         # CONTINUE
+- * &MILITARY 行动                                   [190]         # CONTINUE
+- * 轰炸                                             [190]         # CONTINUE
+- * 进攻                                             [190]         # CONTINUE
+- * 炮击                                             [190]         # CONTINUE
+- * 攻击                                             [190]         # CONTINUE
+- * 攻击                                             [190]         # CONTINUE
+
+
+---  COLLECT   [---]  ---
+集合
+收集
+围捕
+积累
+累积
+积聚
+收藏
+搜集
+编译
+汇编
+囤积
+- * 文件                                             [090]         # COLLECT
+- * 情报                                             [093]         # COLLECT
+
+---  DESPATCH   [---]  ---
+调度
+发送
+派遣
+开除
+解雇
+解散
+驳回
+- * 指控                                             [016]         # DISMISS
+- * &WEAPON                                          [072]         # EXPORT
+- * 案件                                             [081]         # DISMISS
+- * 州长                                             [110]         # DISMISS
+
+---  DESPATCH0  [---]  ---
+派遣
+派驻
+派出
+- * &WEAPON                                            [062]         # send
+- * &AIRCRAFT                                          [062]         # send
+- * &MILITARY										   [190]		 # send
+
+---  EXPLAIN_VERBAL0   [---]  ---
+报道
+宣布
+报告
+提到
+交待
+交流
+传授
+传达
+参照
+参考
+叙说
+叙述
+告知
+宣告
+宣布
+宣称
+弄清
+引用
+引证
+形容
+报导
+指出
+描写
+描绘
+描述
+提到
+提及
+提起
+断言
+沟通
+注释
+澄清
+理顺
+称
+给予
+维护
+表明
+表示
+表达
+解说
+解释
+认为
+讲述
+说
+说出
+说明
+阐述
+限定
+介绍
+回应
+- *													 [010]		   # SAY
+
+
+
+
+---  EXPLOSIVE_DESTRUCTION   [190]  ---
+炸毁
+爆炸
+轰击
+轰炸
+炮击
+引爆
+爆炸
+- * 计划                                             [012]         # BLAST
+- &WEAPON * 庆祝                                     [017]         # BLAST
+- 爆炸 *                                             [180]         # BLAST
+- &INVESTIGATION *                                   [181]         # BLAST
+- 爆发 *                                            [181]          # EXPLODE
+- * 攻击                                             [181]         # BLAST
+- 投掷 *                                            [145]         # PELT
+- * 管道                                             [1712]        # BLEW_UP
+- * 催泪瓦斯                                          [175]         # FIRE
+- * 催泪瓦斯                                          [175]         # FIRE
+- * 汽车                                             [182]         # PELT
+- 游击队 * &WEAPON                                   [183]         # DETONATE
+- &WEAPON *                                          [183]         # EXPLODE
+- * 地雷                                             [183]         # DETONATE
+- 地雷 *                                             [183]         # EXPLODE
+- * &CAR                                             [183]         # EXPLODE
+- * 开火                                             [190]         # FIRE
+- &WEAPON *                               			 [193]         # FIRE
+- * 子弹                                             [193]         # FIRE
+- * 手榴弹                                           [193]         # FIRE
+- &MILITARY * 催泪 瓦斯                              [194]         # FIRE
+- * 火箭                                             [194]         # FIRE
+- &WEAPON *                                          [194]         # BLAST
+- * 袭击                                             [194]         # BOMB
+- 电池 *                                             [194]         # FIRE
+- 导弹 *                                             [194]         # BLOWN UP
+- * 震撼                                             [194]         # EXPLODE
+- * 火箭                                             [194]         # FIRE
+- 坦克 *                                             [194]         # FIRE
+- 战斗机 *                                           [195]         # BOMB
+- * &AIRCRAFT                                        [195]         # BOMB
+- 战士 *                                             [195]         # BOMB
+
+
+---  EVACUATE   [---]  ---
+起飞
+逃跑
+放弃
+抛弃
+遗弃
+逃窜
+逃亡
+潜逃
+逃避
+逃脱
+撤离
+撤退
+疏散
+逃离
+逃走
+出走
+离弃
+- * 公民											 [073]         # EVACUATE	
+- * &REFUGEE                                         [073]         # EVACUATE
+- * 家庭                                             [073]         # EVACUATE
+- * 治疗                                             [074]         # EVACUATE
+- &REFUGEE *                                         [075]         # FLEE
+- * 尝试                                             [080]         # ABANDON
+- * 总部                                             [0874]        # ABANDON
+- * &STRONGHOLD                                      [0874]        # ABANDON
+- * 位置                                             [0874]        # EVACUATE
+- * 前哨                                             [0874]        # ABANDON
+- * 人员                                             [160]         # EVACUATE
+- * 营地                                             [160]         # EVACUATE
+- * 作用                                             [160]         # ABANDON
+- * 使馆                                             [161]         # EVACUATE
+- * &CEASEFIRE                                       [196]         # ABANDON
+
+
+---  PATROL0   [150]  ---
+巡逻
+巡航
+- &AIRCRAFT *                                        [150]         # PATROL
+- &MILITARY *                                        [150]         # PATROL
+- &WEAPON *                                        	 [150]         # PATROL
+
+
+
+--- ATTACK1 [150] -----------
+发射
+出动
+- &MILITARY *   [150] # LAUNCH
+- &WMD *        [150] # LAUNCH
+- &WEAPON *     [150] # LAUNCH
+- &AIRCRAFT *   [150] # LAUNCH
+- 向 * &MILITARY   [150] # LAUNCH
+- 向 * &AIRCRAFT   [150] # LAUNCH
+- 向 * &WMD         [150] # LAUNCH
+- 向 * &WEAPON      [150] # LAUNCH
+
+--- LAUNCH0 [150] -----------
+发射
+试射
+部署
+测试
+出动
+首飞
+飞
+- &MILITARY *   [150] # LAUNCH
+- &WMD *        [150] # LAUNCH
+- &WEAPON *     [150] # LAUNCH
+- &AIRCRAFT *   [150] # LAUNCH
+- * &MILITARY   [150] # LAUNCH
+- * &AIRCRAFT   [150] # LAUNCH
+- * &WMD         [150] # LAUNCH
+- * &WEAPON      [150] # LAUNCH
+- * 防御系统      [154]
+- * 系统          [154]
+
+--- LAUNCH1 [150] -----------
+- &MILITARY *   [150] # LAUNCH
+- &WMD *        [150] # LAUNCH
+- &WEAPON *     [150] # LAUNCH
+- &AIRCRAFT *   [150] # LAUNCH
+- * &MILITARY   [150] # LAUNCH
+- * &AIRCRAFT   [150] # LAUNCH
+- * &WMD         [150] # LAUNCH
+- * &WEAPON      [150] # LAUNCH
+- * 防御系统      [154]
+
+
+
+
+---  BUILD0   [150]  ---
+研制
+研发
+制造
+建造
+- * &AIRCRAFT                                        [150]         # BUILD
+- * &MILITARY                                        [150]         # BUILD
+- * &WEAPON                                          [150]         # BUILD
+- * &WMD                                             [150]         # BUILD
+
+
+---  DESTROY1   [190]  ---
+消灭
+- * 米                                             [190]         # 为测试用，需删除
+- 米 *                                              [190]         # 为测试用，需删除
+
+---  DESTROY0   [---]  ---
+消灭
+摧毁
+消减
+湮灭
+打败
+击败
+精选
+打断
+打破
+粉碎
+压碎
+毁掉
+杀害
+挫败
+战胜
+毁坏
+破坏
+拆除
+拆毁
+毁灭
+解除
+根除
+铲除
+拔除
+抹杀
+淹没
+破灭
+灭亡
+征服
+- * 选手                                             [---]         # BEAT
+- * 候选人                                           [---]         # DEFEAT
+- * 武装                                             [082]         # DOMINATE
+- * &PROPOSAL                                        [121]         # DEFEAT
+- * 挑战                                             [121]         # DEFEAT
+- * 禁运                                             [128]         # BREAK
+- * 关系                                             [161]         # BREAK
+- * 建筑                                             [1712]        # DESTROY
+- * 纪念碑                                           [1712]        # DESTROY
+- * &WEAPON                                          [1712]        # DESTROY
+- * &WMD                                             [1712]        # DESTROY
+- * &AIRCRAFT                                        [1712]        # DESTROY
+- * 房子                                             [1712]        # DESTROY
+- * 房屋                                             [1712]        # DESTROY
+- * &CAR                                             [1712]        # DESTROY
+- * 家庭                                             [1712]        # DESTROY
+- * 示威                                             [175]         # BREAK
+- * 领袖                                             [186]         # WIPED_OUT
+- * 核心 &MILITARY                                   [190]         # DESTROY
+- * 桥梁                                             [190]         # DESTROY
+
+---  DESTROY0   [190]  ---
+摧毁
+- * 哨所	[190] # DESTROY
+
+--- WARNING1 [110]   ---
+警告
+- * 	[110] # WARNING
+
+---  PURCHASE0   [061]  ---
+买入
+购买
+购入
+接收
+采购
+- * &WEAPON                                          [062]         # BUY
+- * &AIRCRAFT                                        [062]         # BUY
+- * &WMD                                             [062]         # BUY
+- * 武器                                             [062]         # BUY
+- * 系统								             [062]         # BUY
+- * 防空系统							             [062]         # BUY
+
+
+--- SELL0 [062] -----
+出售
+交付
+- * &WEAPON                                          [062]         # SELL
+- * &AIRCRAFT                                        [062]         # SELL
+- * &WMD                                             [062]         # SELL
+- * 武器                                             [062]         # SELL
+- * 系统								             [062]         # SELL
+- * 防空系统							             [062]         # SELL
+- * 防御系统							             [062]         # SELL
+
+---  PROPOSE0   [---]  ---
+建议
+提议
+- *													 [020]		   # SAY
+
+--- PROVIDE0 [072] ----
+提供
+支援
+支持
+- * &WEAPON                                          [072]         # SELL
+- * &AIRCRAFT                                        [072]         # SELL
+- * &WMD                                             [072]         # SELL
+- * 武器                                             [072]         # SELL
+- * 系统								             [072]         # SELL
+- * 防空系统							             [072]         # SELL
+- * 防御系统							             [072]         # SELL
+
+
+--- NEGOTIATION0 [046] -----
+谈判
+- *													[046]		  # NEGOTIATION
+
+--- NEGOTIATION1 [046] -----
+进行
+开展
+- * 谈判											[046]         # NEGOTIATION
+- * 会晤											[046]         # NEGOTIATION
+
+--- CARRY_ON0 [---]  ------
+进行
+开始
+组织
+开展
+展开
+启动
+实施
+执行
+发起
+发动
+完成
+参加
+- * 制裁                                             [163]         # 
+- * 行动                                             [190] #
+- * 军事 行动                                             [190] #
+- * 空袭                                             [190] #
+- * 袭击                                             [190] #
+- * 空袭行动                                         [190] #
+- * 访问                                             [042] #
+- * &AIRCRAFT 打击                                 	 [190] #
+- * &MILITARY 打击                                 	 [190] #
+- * &WEAPON 打击                                   	 [190] #
+- &AIRCRAFT * 打击                                 	 [190] #
+- &MILITARY * 打击                                 	 [190] #
+- &WEAPON   * 打击                                 	 [190] #
+- * 打击                                           	 [190] #
+- * 清剿                                           	 [190] #
+- * 清剿行动                                         [190] #
+- * 军事封锁                                       	 [191]    #
+- * 军事行动                                       	 [192]    #
+- &AIRCRAFT * 拦截                                	 [150]   #
+- &MILITARY * 拦截                                	 [150]   #
+- &WEAPON * 拦截                                  	 [150]   #
+- * 侦察                                          	 [150]   #
+- * 侦查                                          	 [150]   #
+- 军演 *                                          	 [150]
+- 演习 *                                          	 [150]
+- 演练 *                                          	 [150]
+- 训练 *                                          	 [150]
+- * 谈判											 [046]         # NEGOTIATION
+- * 训练											 [150]		   # 训练
+- * 演习											 [150]		   # 演习
+- * 演练											 [150]		   # 演习
+- * 军演											 [150]		   # 军演
+- * &MEDIATION                                     	 [045]         # CONTINUE
+- * 谈判                                             [046]         # CONTINUE
+- * 对峙                                             [120:120]     # CONTINUE
+- * 拒绝 承认                                        [1232]        # CONTINUE
+- * 围攻                                             [1246]        # CONTINUE
+- * 起义                                             [145]         # CONTINUE
+- * &MILITARY 建设                                   [154]         # CONTINUE
+- * 镇压                                             [170]         # CONTINUE
+- * &MILITARY 行动                                   [190]         # CONTINUE
+- * 轰炸                                             [190]         # CONTINUE
+- * 进攻                                             [190]         # CONTINUE
+- * 炮击                                             [190]         # CONTINUE
+- * 攻击                                             [190]         # CONTINUE
+- * 炮轰                                             [190]         # CONTINUE
+- &WEAPON * 表演                                     [150]         #
+- &AIRCRAFT * 表演                                   [150]         #
+- &MILITARY * 表演                                   [150]         #
+- &WEAPON * 训练                                     [150]         #
+- &AIRCRAFT * 训练                                   [150]         #
+- &MILITARY * 训练                                   [150]         #
+- &WEAPON * 演习                                     [150]         #
+- &AIRCRAFT * 演习                                   [150]         #
+- &MILITARY * 演习                                   [150]         #
+- &WEAPON * 演练                                     [150]         #
+- &AIRCRAFT * 演练                                   [150]         #
+- &MILITARY * 演练                                   [150]         #
+- &WEAPON * 任务                                     [150]         #
+- &AIRCRAFT * 任务                                   [150]         #
+- &MILITARY * 任务                                   [150]         #
+- * &MILITARY 实验                                   [150]         # CONTINUE
+- * &MILITARY 试验                                   [150]         # CONTINUE
+
+--- RELEASE0 [064]--------
+发布
+发表
+公开
+公布
+- * 命令	[010]      # STATEMENT
+- * 公告	[010]      # STATEMENT
+- * 文件	[064]	   #share information
+- * 证据	[064]	   #share information
+- * 数据	[064]	   #share information
+- * 战略	[064]      #share information
+- * 照片	[064]      #share information
+
+--- ARREST0 [173]---------
+逮捕
+抓捕
+搜捕
+抓获
+- * 		    		[173]	# ARRESET
+- * 嫌疑人		  		[173]	# ARRESET
+- * 武装分子		 	[173]	# ARRESET
+- * 分子		  		[173]	# ARRESET
+
+
+
+
+
+--- OCCUPY0 [192]   ----------
+收复
+夺回
+夺下
+占领
+包围
+摧毁
+- * 				[192] # OBTAIN
+
+
+--- OCCUPY1 [192]   ----------
+取得
+收回
+收复
+夺回
+夺下
+占领
+占据
+包围
+摧毁
+- * 控制权 				[192] # OBTAIN
+- * 地区 				[192] # OBTAIN
+- * 据点				[192] # OCCUPY
+- * 军事据点			[192] # OCCUPY
+
+
+
+--- PEOTECT0 [070] ----
+驻守
+- *         	[074]
+- * 地区		[074]
+
+--- TRAIN0 [150] ---
+出海
+- * 训练  			[150] #
+
+--- OBTAIN0 [070] ----
+得到
+给予
+提供
+- * 贷款  			[071] #
+- * 帮助  			[070] #
+- * 救助  			[070] #
+
+--- JOIN0 [---] ------
+加入
+- * 组织            [060] #
+- * 政治组织        [050] #
+
+--- MIL_COPERATION0 [062] ----
+讨论
+谈判
+商量
+- * &WEAPON                                     [062]         #
+- * &AIRCRAFT                                   [062]         #
+- * &MILITARY                                   [062]         #
+
+--- INVESTIGATE0 [090] ----
+调查
+搜查
+- * 						[090] #
+- * 住所					[090] #
+
+
+--- CENTRAL0 [190]   ---
+集中
+- 战斗 *       [190] #
+
+--- ATTACK0 [190]   ---
+袭击
+偷袭
+攻击
+总攻
+- 军方 *       [190] #
+- 准备 *       [190] #
+- * 基地      [190] #
+- * 据点      [190] #
+
+--- INVESTIGATE1 [090] ----
+展开
+进行
+开始
+开展
+- * 调查	       			[090] #
+- * 搜查	       			[090] #
+
+
+--- CHARGE0 [170]    ---
+指控
+诉讼
+- *             			[173] #
+
+--- CHARGE0 [170]    ---
+提起
+- * 诉讼            		[173] #
+
+
+--- AID0 [070]-----
+驰援
+援助
+支援
+- *     	       			[070] #
+
+--- AID1 [070]-----
+提供
+- * 救治           			[070] #
+- * 食物           			[070] #
+- * 药品           			[070] #
+
+
+--- SYMBOLIC_ACT0 [017] ---
+敬献
+悼念
+- * 花圈  				[017] #
+- * 鲜花  				[017] #
+
+--- VISIT0 [040] ---
+完成
+开展
+进行
+开始
+- * 访问                [042] # make a VISIT
+
+
+--- VISIT1 [040] ---
+抵达
+到达
+访问
+- 编队 *          [042] # make a VISIT
+
+
+---  VISIT   [042]  ---
+拜访
+参观
+访问
+- * &MILITARY 医院                                   [042]         # VISIT
+- * 会谈                                             [042]         # VISIT
+- 检查 *                                             [090]         # VISIT
+- * 												 [042] # make a visit
+
+--- HAPPEN0 [---] ---
+发生
+进行
+发动
+制造
+- * 恐怖袭击          [180] #
+- * 袭击              [180] #
+- * 袭击事件          [180] #
+- * 爆炸              [180] #
+- * 政变              [1451] #
+- * 军事政变          [1451] #
+- * 交火              [190] #
+
+--- INVADE0  [---] ---
+侵犯
+占领
+- * 领空      [154]   #
+- * 机构      [190]   #
+- * 医院      [190]   #
+- * 学校      [190]   #
+
+---  ENTER   [---]  ---
+进入
+- &MILITARY *                                        [190]         # ENTER
+- &WEAPON *											 [190]		   # ENTER
+- &WMD *											 [190]		   # ENTER
+- &AIRCRAFT *									     [190]		   # ENTER
+- &MILITARY * &TOWN                                  [190]         # ENTER
+
+
+--- LEAD0   [190] ---
+造成
+导致
+- * 重伤      [190] #
+- * 受伤      [190] #
+- * 死亡      [190] #
+- * 身亡      [190] #
+- * 伤亡      [190] #
+
+---  HOST   [043:042]  ---
+主持
+举行
+举办
+- * &MILITARY 会议                                   [0332]        # HOST
+- * 军事 &MILITARY                                   [0332]        # HOST
+- * 峰会                                             [036:036]     # HOST
+- * 会面                                             [043:042]     # HOST
+- * 晚宴                                             [043]         # HOST
+- * 会议                                             [046]         # HOST
+- * 会谈                                             [046]         # HOST
+- * 见面会                                           [046]         # HOST
+- * 会晤                                             [046]         # HOST
+- * 联合 演习                                        [062:062]     # HOST
+
+--- HOLD0 [---]  ---
+举行
+举办
+出席
+参加
+召开
+进行
+- * 阅兵仪式           [150]    # HOLD
+- * 阅兵式           [150]    # HOLD
+- * 阅兵           [150]    # HOLD
+- * 仪式           [017]    # HOLD
+- * 招待会         [017]   # ATTEND
+- * 闭幕式         [017]   # ATTEND
+- * 迎接           [017]   # ATTEND
+- * 会议		   [040]	# CONSULT
+- * 会谈		   [040]	# CONSULT
+- * 会晤		   [040]	# CONSULT
+
+--- MEETING0 [---]  ---
+会见
+接待
+拜会
+- *				   [040] # MEETING
+
+---  PHYSICAL_CONFLICT0   [190]  ---
+攻击
+抵抗
+反击
+回击
+开枪
+猛击
+突击
+殴打
+进攻
+战斗
+撞击
+冲突
+击败
+决斗
+打架
+打击
+连击
+报复
+包围
+围攻
+击中
+击沉
+击伤
+击毁
+击落
+袭击
+进军
+侵犯
+突袭
+- * 队伍                                             [175]         # ATTACK
+- * 示威者                                           [180]         # BATTLE
+- * 巴士                                             [180]         # ATTACK
+- * 基地                                             [190]         # ATTACK
+- * 营地                                             [190]         # ATTACK
+- * &STRONGHOLD                                      [192]         # STORM
+- &WEAPON *                                          [193:193]     # BATTLE
+- * &WEAPON                                          [194]         # ATTACK
+- * 攻击                                             [194]         # ATTACK
+- &MILITARY *                                        [194]         # ATTACK
+- &AIRCRAFT *                                        [195]         # ATTACK
+- &WEAPON *                                          [195]         # HIT
+- * &MILITARY                                         [194]         # ATTACK
+- * &AIRCRAFT                                         [195]         # ATTACK
+- * &WEAPON                                           [195]         # HIT
+- * 总部											  [190] 		# ATTACK
+
+--- ATTACK0 [190]   ---
+袭击
+偷袭
+攻击
+轰炸
+进攻
+炮击
+攻击
+炮轰
+炸毁
+攻入
+突袭
+摧毁
+交火
+- * 基地      [190] #
+- * 据点      [190] #
+- *           [190] #
+
+--- ASSULT0 [180]  ------
+遭袭
+遇袭
+- * 											   [180] # ASSULT0
+
+--- ASSULT1 [180] ----
+打死
+打
+伤
+挟持
+引爆
+- * 					    [180] #
+- &MILITARY     *           [180] #
+- 士兵          *           [180] #
+- * 平民                    [184] #
+- * 市民                    [184] #
+- * &PEOPLE   				[180]    #
+- * &SUSPECT   				[180]    #
+- * &REFUGEE   				[180]    #
+
+--- KILLED0 [180]   -----
+死亡
+身亡
+受伤
+击毙
+- * 						[180]    #
+
+--- KILLED [180]   -----
+死亡
+身亡
+受伤
+击毙
+消灭
+- * 武装分子				[180]    #
+- * 极端分子				[180]    #
+- &PEOPLE *   				[180]    #
+- &SUSPECT *  				[180]    #
+- &REFUGEE *  				[180]    #
+- * &PEOPLE   				[180]    #
+- * &SUSPECT   				[180]    #
+- * &REFUGEE   				[180]    #
+
+---  CANCEL   [087]  ---
+取消
+放弃
+关闭
+废止
+废除
+中断
+中止
+终止
+断绝
+停止
+结束
+离开
+退出
+辞职
+阻止
+暂停
+- * 会议                                             [040]         # END
+- * 访问                                             [042:043]     # CONCLUDE
+- * 行动                                             [080]         # HALT
+- * 驱逐                                             [080]         # STOP
+- * 罢工                                             [082]         # HALT
+- * 禁运                                             [085]         # STOP
+- * 空袭                                             [0871]        # HALT
+- * 袭击                                             [0871]        # HALT
+- * 暴力                                             [0871]        # HALT
+- * 攻击                                             [0871]        # HALT
+- * 冲突                                             [0871]        # HALT
+- * 攻击                                             [0871]        # STOP
+- * 营地                                             [0874]        # QUIT
+- * 封锁                                             [087]         # END
+- * 流血                                             [087]         # STOP
+- * &WEAPON                                          [087]         # STOP
+- * 罢工                                             [087]         # CALLED_OFF
+- * 工作                                             [143]         # STOP
+- * 飞行                                             [160]         # HALT
+- * 会谈                                             [160]         # CALLED_OFF
+- * 营地                                             [160]         # CLOSE
+- * 党                                               [160]         # QUIT
+- * 基地                                             [160]         # CLOSE
+- * 领事馆                                           [161]         # CLOSE
+- * 大使馆                                           [161]         # CLOSE
+- 大使馆 *                                           [161]         # CLOSE
+- * 资助                                             [1621]        # STOP
+- * &MILITARY 合作                                   [1622]        # HALT
+- * &SECURITY 合作                                   [1622]        # HALT
+- * 武器 装运                                        [1622]        # STOP
+- * 援助                                             [162]         # HALT
+- 援助 *                                             [162]         # STOP
+- 突然 * 谈判                                        [164:164]     # END
+- * 会谈                                             [164:164]     # END
+- * &INFORMATION                                     [1721]        # CLOSE
+
+
+
+--- PASSIVE0 [---]  ------
+遭到
+遭遇
+遭
+- * 空袭                                           	[190] #
+- * 空袭行动                                        [190] #
+- * &AIRCRAFT 打击                                 	[190] #
+- * &MILITARY 打击                                 	[190] #
+- * &WEAPON 打击                                   	[190] #
+- &AIRCRAFT * 打击                                 	[190] #
+- &MILITARY * 打击                                 	[190] #
+- &WEAPON   * 打击                                 	[190] #
+- * 打击                                           	[190] #
+- * 清剿                                           	[190] #
+- * 清剿行动                                        [190] #
+- * 军事封锁                                       	[191]    #
+- * 军事行动                                       	[192]    #
+- &AIRCRAFT * 拦截                                	[150]   #
+- &MILITARY * 拦截                                	[150]   #
+- &WEAPON * 拦截                                  	[150]   #
+- * 围攻                                             [1246]        # PASSIVE
+- * 镇压                                             [170]         # PASSIVE
+- * 轰炸                                             [190]         # PASSIVE
+- * 进攻                                             [190]         # PASSIVE
+- * 炮击                                             [190]         # PASSIVE
+- * 攻击                                             [190]         # PASSIVE
+- * 炮轰                                             [190]         # PASSIVE
+- * 袭击                                             [190]         # PASSIVE
+
+
+--- PROTEST0    [140] ----
+举行
+进行
+抗议
+- * 演习              [150]   #
+- * 集会              [140]   #
+- * 游行              [140]   #
+- * 示威              [140]   #
+- * 示威活动          [140]   #
+
+--- BUILD0   [150] ---
+建造
+研发
+制造
+- * &WEAPON         [154]
+- * &MILITARY       [154]
+- * &AIRCRAFT       [154]
+- * 航母              [154] #
+- * 火箭              [154] #
+- * 导弹              [154] #
+
+
+--- SIEZE   [130] ---
+缴获
+- * 			[130]
+
+---  DISCLOSE0   [050]  ---
+披露
+- * 			[050]
+
+---  DISCLOSE0   [060]  ---
+降
+- *                                        [010]         # FALL
+
+---  RESIGN   [---]  ---
+下台
+必须
+- *                                         [---]         # FALL
+
+--- DETERIORATE   [130] ---
+恶化
+- *          [130]
+
+---  START   [---]  ---
+开启
+- *           [---]
+
+---  REASSERT   [051]  ---
+重申
+- *           [051]
+
+
+---  SIGN0   [---]  ---
+签名
+签字
+签约
+签署
+签订
+批准
+达成
+- * 命令											 [057]		   #
+- * 制裁                                             [163]         # 
+- * &DEFENSE &TREATY                                 [062]         # SIGN
+- * &MILITARY                                        [062:062]     # SIGN
+- * &MILITARY &TREATY                                [062]   # SIGN
+- * &TREATY                                          [057:057]     # SIGN
+- * 协议                                             [057]         # SIGN
+- * 合同                                             [060:060]     # SIGN
+- * 和平 &TREATY                                     [057:057]     # SIGN
+- * 和平 协议                                        [057:057]     # SIGN
+- * 宣言                                             [057:057]     # SIGN
+- * 法令                                             [057]         # SIGN
+- * 法律                                             [057]         # SIGN
+- * 立法											 [057]         # SIGN
+- * 提案											 [057]         # SIGN					
+- * 石油 &TREATY                                     [061]        # SIGN
+- * 经济 &TREATY                                     [061:061]     # SIGN
+- * 联合 &TREATY                                     [057:057]     # SIGN
+- * 联盟 &TREATY                                     [060:060]     # SIGN
+- * 自由 贸易 &TREATY                                [061:061]     # SIGN
+- * 贷款                                             [071]         # SIGN
+- * 贷款 &TREATY                                     [061:061]     # SIGN
+- * 贷款 协议                                        [061:061]     # SIGN
+- * 协定                                             [061:061]     # SIGN
+
+---  EXPLAIN_VERBAL1   [---]  ---
+举例
+交待
+交流
+传授
+传达
+参照
+参考
+叙说
+叙述
+告知
+#告诉
+宣告
+宣布
+宣称
+弄清
+引用
+引证
+形容
+报导
+指出
+描写
+描绘
+描述
+提到
+提及
+提起
+断言
+沟通
+注释
+澄清
+理顺
+称
+给予
+维护
+表明
+表示
+表达
+表达
+解说
+解释
+认为
+讲述
+说
+说出
+说明
+阐述
+限定
+- * &CEASEFIRE                                       [0871]        # ANNOUNCE
+- * &FIGHT                                           [012]         # REPORT
+- * &INVESTIGATION                                   [090]         # ANNOUNCE
+- * 支持		                                     [072]         # ANNOUNCE
+- * &OPPOSITION                                      [110]         # EXPRESS
+- * &PROPOSAL                                        [020]         # ANNOUNCE
+- * 不满                                             [110]         # EXPRESS
+- * 乐观                                             [013]         # EXPRESS
+- * 信任                                             [012]         # EXPRESS
+- * 信心                                             [013]         # EXPRESS
+- * 冲突                                             [012]         # REPORT
+- * 制裁                                             [163]         # ANNOUNCE
+- * 厌恶                                             [111]         # EXPRESS
+- * 同情                                             [018]         # EXPRESS
+- * 同意                                             [030]         # ANNOUNCE
+- * 喜悦                                             [051]         # EXPRESS
+- * 团结                                             [051]         # EXPRESS
+- * 失望                                             [110]         # EXPRESS
+- * 威胁                                             [012]         # SAY
+- * 希望                                             [013]         # EXPRESS
+- * 忧虑                                             [012]         # EXPRESS
+- * 怀疑                                             [012]         # EXPRESS
+- * 怀疑                                             [114]         # EXPRESS
+- * 恐惧                                             [110]         # EXPRESS
+- * 悲伤                                             [012]         # EXPRESS
+- * 悲观                                             [012]         # EXPRESS
+- * 惊讶                                             [012]         # EXPRESS
+- * 感激                                             [013]         # EXPRESS
+- * 愤怒                                             [111]         # EXPRESS
+- * 愿望                                             [020]         # EXPRESS
+- * 慰问                                             [018]         # EXPRESS
+- * 抗议                                             [140]         # ANNOUNCE
+- * 报复                                             [130]         # ANNOUNCE
+- * 报警                                             [012]         # EXPRESS
+- * 抵制                                             [1312]        # SAY
+- * 担忧                                             [012]         # EXPRESS
+- * 损害                                             [111]         # DESCRIBE
+- * 措施                                             [130]         # ANNOUNCE
+- * 援助                                             [0331]        # ANNOUNCE
+- * 撤军                                             [0356]        # ANNOUNCE
+- * 撤回                                             [0874]        # ANNOUNCE
+- * 支持                                             [051]         # SAY
+- * 改革                                             [083]         # ANNOUNCE
+- * 攻击                                             [190]         # REPORT
+- * 敌意                                             [012]         # EXPRESS
+- * 焦虑                                             [012]         # EXPRESS
+- * 疑虑                                             [012]         # EXPRESS
+- * 痛苦                                             [012]         # EXPRESS
+- * 紧张                                             [012]         # SAY
+- * 谨慎                                             [012]         # EXPRESS
+- * 震惊                                             [012]         # EXPRESS
+- * 歉意                                             [055]         # SAY
+- * 沮丧                                             [012]         # EXPRESS
+- * 满意                                             [051]         # EXPRESS
+- * 谴责                                             [111]         # EXPRESS
+- * 贷款                                             [071]         # ANNOUNCE
+- * 赞成                                             [110]         # EXPRESS
+- * 赦免                                             [0841]        # ANNOUNCE
+- * 辞职                                             [0831]        # ANNOUNCE
+- * 进攻                                             [138]         # ANNOUNCE
+- * 逮捕                                             [173]         # ANNOUNCE
+- * 遗憾                                             [018]         # EXPRESS
+- * 释放                                             [0841]        # ANNOUNCE
+- * 重组                                             [083]         # ANNOUNCE
+- * 问候                                             [017]         # CONVEY
+
+
+--- HOPE0 [---]  ---
+希望
+渴望
+呼吁
+期望
+- *												[020] #
+- * &NEGOTIATION                                [036]         # EXPRESS
+
+---  NOTIFY   [---]  ---
+发布
+预告
+发送
+告诉
+告知
+报知
+通知
+公布
+颁布
+- * 异议                                             [110]         # APPRISE
+
+--- WAR0 [190] ---
+爆发
+- 战争 *  										[190] # 
+- 内战 *  										[190] # 
+- * 战争   										[190] # 
+- * 内战   										[190] # 
+
+--- RETREAT0 [087] ---
+撤军
+- *						 						[0873] 	#
+
+--- RETREAT1 [087] ---
+撤军
+撤离
+缩减
+- &MILITARY *						 						[0873] 	#
+- &AIRCRAFT *						 						[0873] 	#
+
+---  REJECT0   [010]  ---
+拒绝 # 伊朗拒绝证实此次消息是否属实。
+- * 												 [120]		   # REJECT
+
+---  YIELD   [080]  ---
+屈服
+放弃
+停止
+投降
+割让
+承认
+让步
+让出
+废除
+压垮
+丢弃
+- * 比赛                                             [---]         # BOW
+- * 投降                                             [080]         # SURRENDER
+- * 武器                                             [0842]        # SURRENDER
+- * 处罚                                             [085]         # WAIVE
+- * 禁令                                             [085]         # WAIVE
+- * &WEAPON                                          [0873]        # SURRENDER
+- &MILITARY *                                        [0874]        # SURRENDER
+- 士兵 *                                             [0874]        # SURRENDER

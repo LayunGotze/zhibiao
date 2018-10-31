@@ -1,0 +1,13 @@
+
+#part1
+######   The United Nations  #######
+联合国 [IGOUNO]
+
+# Secretarys General
+联合国_秘书长
+	[IGOUNO]
+秘书长_潘基文
++联合国_秘书长_潘基文
++潘基文
+	[IGOUNO >20070101]
+	[KORGOVBUS 2004017-20061201]

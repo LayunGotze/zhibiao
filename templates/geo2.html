@@ -5,26 +5,323 @@
 <!-- 所有地图数据详情见：https://img.hcharts.cn/mapdata/index.html -->
 <script src="https://img.hcharts.cn/mapdata/custom/world-highres.js"></script>
 <script src="https://img.hcharts.cn/mapdata/custom/world-highres.geo.json"></script>
-<input type="text" name="actor1" id="actor1" />
-<input type="text" name="actor2" id="actor2" />
-<input type="button" onclick="click1()" value="Submit" />
-<div id="container" style="height: 120%;"></div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+<span>施事者姓名:</span><input type="text" name="actor1" id="actor1" />
+<span>受事者姓名:</span><input type="text" name="actor2" id="actor2" />
+<span>事件</span>
+<select id="code" >
+    <option value ="说">说</option>
+    <option value ="做">做</option>
+    <option value ="担忧">担忧</option>
+    <option value ="相信">相信</option>
+</select>
+<span>开始时间</span><input type="date" name="start" id="start" />
+<span>截止时间</span><input type="date" name="end" id="end" />
+<input type="button" onclick="click1()" value="提交"/>
+<div id="app">
+<template>
+  <el-carousel indicator-position="outside" height="100%">
+    <el-carousel-item v-for="item in 4" :key="item">
+      <div id="container" style="height: 120%;"></div>
+    </el-carousel-item>
+  </el-carousel>
+</template>
+</div>
+<template>
+  <el-carousel indicator-position="outside">
+    <el-carousel-item v-for="item in 4" :key="item">
+      <h3>{{ item }}</h3>
+    </el-carousel-item>
+  </el-carousel>
+</template>
+
+<style>
+  .el-carousel__item h3 {
+    color: #475669;
+    font-size: 18px;
+    opacity: 0.75;
+    line-height: 300px;
+    margin: 0;
+  }
+
+  .el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
+
+  .el-carousel__item:nth-child(2n+1) {
+    background-color: #d3dce6;
+  }
+</style>
+
 <script>
+
+    var app=new Vue({
+            el: '#app',
+            data: {
+                loading:false
+            }
+        });
     function click1() {
         actor1 = $('#actor1').val();
         actor2 = $('#actor2').val();
-        draw_geo(actor1, actor2)
+        code = $('#code option:selected ').val();
+        startdate=$('#start').val();
+        enddate=$('#end').val();
+        draw_geo(actor1, actor2,code,startdate,enddate)
+    }
+    function draw_geo(actor1, actor2,code,startdate,enddate) {
+        tmp={
+              "msg":"success",
+              "total": 4,
+              "res": [
+                {
+                  "sqldate": "20180502",
+                  "sentid": "5ae994a9aacf802249155fb3_0",
+                  "actor2geo_fullname": "China",
+                  "actor1geo_fullname": "Canberra",
+                  "actor1geo_fullname1": {
+                    "origin": {
+                      "msg": "success",
+                      "res": {
+                        "title": "France, Australia call on China to observe rules",
+                        "url": "http://www.miamiherald.com/news/business/article210267264.html#storylink=rss",
+                        "sent": "French President Emmanuel Macron and Australian Prime Minister Malcolm Turnbull on Wednesday issued a reminder to China to respect a \"rules-based\" order in the South Pacific amid concerns about Beijing's growing influence in the region."
+                      }
+                    },
+                    "time": "20180502",
+                    "lat": -35.2975906,
+                    "lon": 149.1012676,
+                    "color": "red",
+                    "name": "President",
+                    "geo": "Canberra"
+                  },
+                  "actor2geo_fullname1": {
+                    "origin": {
+                      "msg": "success",
+                      "res": {
+                        "title": "France, Australia call on China to observe rules",
+                        "url": "http://www.miamiherald.com/news/business/article210267264.html#storylink=rss",
+                        "sent": "French President Emmanuel Macron and Australian Prime Minister Malcolm Turnbull on Wednesday issued a reminder to China to respect a \"rules-based\" order in the South Pacific amid concerns about Beijing's growing influence in the region."
+                      }
+                    },
+                    "time": "20180502",
+                    "lat": 35.000074,
+                    "lon": 104.999927,
+                    "color": "blue",
+                    "name": "China",
+                    "geo": "China",
+                    "hub": "Canberra"
+                  }
+                },
+                {
+                  "sqldate": "20180502",
+                  "sentid": "5ae994b3aacf802249155fc2_0",
+                  "actor2geo_fullname": "Beijing",
+                  "actor1geo_fullname": "Canberra",
+                  "actor1geo_fullname1": {
+                    "origin": {
+                      "msg": "success",
+                      "res": {
+                        "title": "France, Australia call on China to observe rules",
+                        "url": "http://www.miamiherald.com/news/business/article210267264.html#storylink=rss",
+                        "sent": "French President Emmanuel Macron and Australian Prime Minister Malcolm Turnbull on Wednesday issued a reminder to China to respect a \"rules-based\" order in the South Pacific amid concerns about Beijing's growing influence in the region."
+                      }
+                    },
+                    "time": "20180502",
+                    "lat": -35.2975906,
+                    "lon": 149.1012676,
+                    "color": "red",
+                    "name": "President",
+                    "geo": "Canberra"
+                  },
+                  "actor2geo_fullname1": {
+                    "origin": {
+                      "msg": "success",
+                      "res": {
+                        "title": "France, Australia call on China to observe rules",
+                        "url": "http://www.miamiherald.com/news/business/article210267264.html#storylink=rss",
+                        "sent": "French President Emmanuel Macron and Australian Prime Minister Malcolm Turnbull on Wednesday issued a reminder to China to respect a \"rules-based\" order in the South Pacific amid concerns about Beijing's growing influence in the region."
+                      }
+                    },
+                    "time": "20180502",
+                    "lat": 39.9059631,
+                    "lon": 116.391248,
+                    "color": "blue",
+                    "name": "China",
+                    "geo": "Beijing",
+                    "hub": "Canberra"
+                  }
+                },
+                {
+                  "sqldate": "20180502",
+                  "sentid": "5ae994a9aacf802249155fb6_0",
+                  "actor2geo_fullname": "China",
+                  "actor1geo_fullname": "Canberra",
+                  "actor1geo_fullname1": {
+                    "origin": {
+                      "msg": "success",
+                      "res": {
+                        "title": "France, Australia call on China to observe rules",
+                        "url": "http://www.miamiherald.com/news/business/article210267264.html#storylink=rss",
+                        "sent": "French President Emmanuel Macron and Australian Prime Minister Malcolm Turnbull on Wednesday issued a reminder to China to respect a \"rules-based\" order in the South Pacific amid concerns about Beijing's growing influence in the region."
+                      }
+                    },
+                    "time": "20180502",
+                    "lat": -35.2975906,
+                    "lon": 149.1012676,
+                    "color": "red",
+                    "name": "President",
+                    "geo": "Canberra"
+                  },
+                  "actor2geo_fullname1": {
+                    "origin": {
+                      "msg": "success",
+                      "res": {
+                        "title": "France, Australia call on China to observe rules",
+                        "url": "http://www.miamiherald.com/news/business/article210267264.html#storylink=rss",
+                        "sent": "French President Emmanuel Macron and Australian Prime Minister Malcolm Turnbull on Wednesday issued a reminder to China to respect a \"rules-based\" order in the South Pacific amid concerns about Beijing's growing influence in the region."
+                      }
+                    },
+                    "time": "20180502",
+                    "lat": 35.000074,
+                    "lon": 104.999927,
+                    "color": "blue",
+                    "name": "China",
+                    "geo": "China",
+                    "hub": "Canberra"
+                  }
+                },
+                {
+                  "sqldate": "20180506",
+                  "sentid": "5af29c05aacf80224916d1a7_1",
+                  "actor2geo_fullname": "China",
+                  "actor1geo_fullname": "Harare",
+                  "actor1geo_fullname1": {
+                    "origin": {
+                      "msg": "success",
+                      "res": {
+                        "title": "Zimbabwe Election Campaigns Ask: What about China?",
+                        "url": "https://www.voazimbabwe.com/a/zimbabwe-election-campaigns-ask-what-about-china-/4381584.html",
+                        "sent": "Zimbabwean President Emmerson Mnangagwa is courting both China and the West, saying that Zimbabwe, after decades of pariah status, is \" open for business. \""
+                      }
+                    },
+                    "time": "20180506",
+                    "lat": -17.831773,
+                    "lon": 31.045686,
+                    "color": "red",
+                    "name": "President",
+                    "geo": "Harare"
+                  },
+                  "actor2geo_fullname1": {
+                    "origin": {
+                      "msg": "success",
+                      "res": {
+                        "title": "Zimbabwe Election Campaigns Ask: What about China?",
+                        "url": "https://www.voazimbabwe.com/a/zimbabwe-election-campaigns-ask-what-about-china-/4381584.html",
+                        "sent": "Zimbabwean President Emmerson Mnangagwa is courting both China and the West, saying that Zimbabwe, after decades of pariah status, is \" open for business. \""
+                      }
+                    },
+                    "time": "20180506",
+                    "lat": 35.000074,
+                    "lon": 104.999927,
+                    "color": "blue",
+                    "name": "China",
+                    "geo": "China",
+                    "hub": "Harare"
+                  }
+                }
+              ],
+              "actor1name": "President",
+              "actor2name": "China"
+            }
+            var tmp = tmp['res'];
+            actor1data = [];
+            actor2data = [];
+            var l = tmp.length;
+            console.log(l);
+            for (var i = 0; i < l; i++) {
+                actor1data.push(tmp[i]['actor1geo_fullname1']);
+                actor2data.push(tmp[i]['actor2geo_fullname1']);
+            }
+            console.log(actor1data);
+            console.log(actor2data);
+            $(function () {
+                // Initiate the chart
+                var chart = Highcharts.mapChart('container', {
+
+                    title: {
+                        text: actor1+' '+code+' '+actor2
+                    },
+                    tooltip: {
+                        pointFormat: '姓名:{point.name}<br>地点{point.geo} <br> 文章名:{point.origin.res.title}<br> 原文:{point.origin.res.url} <br>时间:{point.time}'
+                    },
+                    mapNavigation: {
+                        enabled: true,
+                        buttonOptions: {
+                            verticalAlign: 'bottom'
+                        }
+                    },
+
+                    series: [{
+                        mapData: Highcharts.maps['custom/world-highres'],
+                        name: 'Basemap',
+                        showInLegend: false,
+                        borderColor: '#fff',
+                        nullColor: '#99DD99',
+                        dataLabels: {
+                            enabled: true,
+                            format: 's'
+                        }
+                    }, {
+                        type: 'mapline',
+                        name: 'Links',
+                        color: '#c77'
+                        // Data filled in after chart is drawn
+                    }, {
+                        type: 'mappoint',
+                        name: '施事者地点',
+                        data: actor1data
+                    }, {
+                        type: 'mappoint',
+                        name: '受事者地点',
+                        color: 'grey',
+                        data: actor2data
+                    },
+                    ]
+                });
+
+                // After the chart has been created, programmatically add data to the 'links' series showing connections between hubs and nodes
+                Highcharts.each(chart.series[3].points, function (node) {
+                    if (node.lat) {
+                        Highcharts.merge(true, node, chart.fromLatLonToPoint(node));
+                    }
+                    Highcharts.each(chart.series[2].points, function (hub) {
+                        if (node.hub === hub.geo) {
+                            if (hub.lat) {
+                                hub = chart.fromLatLonToPoint(hub);
+                            }
+                            chart.series[1].addPoint({
+                                path: 'M' + node.x + ' ' + node.y + 'L' + hub.x + ' ' + hub.y
+                            }, false);
+                        }
+                    });
+                });
+                chart.redraw();
+            });
     }
     $(function () {
         // Initiate the chart
         var chart = Highcharts.mapChart('container', {
 
             title: {
-                text: 'France, Australia call on China to observe rules'
+                text: '城市经纬度标注'
             },
-            tooltip: {
-                    pointFormat: '{point.name} <br> 文章名:France, Australia call on China to observe rules<br><a>原文:http://www.miamiherald.com/news/business/article210267264.html#storylink=rss</a><br>时间:2018-05-02'
-            },
+
             mapNavigation: {
                 enabled: true,
                 buttonOptions: {
@@ -42,8 +339,7 @@
                     enabled: true,
                     format: 's'
                 }
-            },
-                {
+            }, {
                 type: 'mapline',
                 name: 'Links',
                 color: '#c77'
@@ -51,36 +347,12 @@
             }, {
                 type: 'mappoint',
                 name: '施事者地点',
-                data: [{
-                    'name': 'France',
-                    'lat': 46.603354,
-                    'lon': 1.8883335,
-                    'color': 'red'
-                },
-                    {
-                        'name': 'Canberra',
-                        'lat': -35.2975906,
-                        'lon': 149.1012676,
-                        'color': 'red'
-                    }]
+                data: []
             }, {
                 type: 'mappoint',
                 name: '受事者地点',
                 color: 'grey',
-                data: [{
-                    'name': 'China',
-                    'lat': 35.000074,
-                    'lon': 104.999927,
-                    'color': 'blue',
-                    'hub': 'France',
-                    'value':'French President Emmanuel Macron and Australian Prime Minister Malcolm Turnbull on Wednesday issued a reminder to China to respect a "rules-based" order in the South Pacific amid concerns about Beijing\'s growing influence in the region.'
-                },{
-                    'name': 'China',
-                    'lat': 35.000074,
-                    'lon': 104.999927,
-                    'color': 'blue',
-                    'hub': 'Canberra'
-                }]
+                data: []
             },
             ]
         });
@@ -91,7 +363,7 @@
                 Highcharts.merge(true, node, chart.fromLatLonToPoint(node));
             }
             Highcharts.each(chart.series[2].points, function (hub) {
-                if (node.hub === hub.geo1) {
+                if (node.hub === hub.name) {
                     if (hub.lat) {
                         hub = chart.fromLatLonToPoint(hub);
                     }
